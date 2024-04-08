@@ -1,8 +1,8 @@
-# Days 5-6: Here comes the CRUD operations
+# Days 7-8: Basic authentication
 
-Well done. At this stage of the challenge, you should have a local server connected to a database with a book model. Now we need to perform Create, Read, Update, and Delete Operations on these books.
+Set up custom user authentication. Where a user in the bookstore, enters his name and password before he can get access to any book.
 
-Create API endpoints that will implement this behavior. These API endpoints are expected to follow proper naming conventions.
+Hint: You will need to create a User Model. Implementing password hashing attracts a higher score
 
 ## Setup
 - Navigate to the root of this repo.
@@ -10,8 +10,8 @@ Create API endpoints that will implement this behavior. These API endpoints are 
 - Visit the following url endpoints:
     |METHOD|DESCRIPTION|ENDPOINT|SAMPLE BODY|
     |------|-----------|--------|----|
-    |GET   |Get all books|http://127.0.0.1:3000/books|-|
-    |GET   |Get a book   |http://127.0.0.1:3000/books/{id}|-|
-    |POST  |Create a book|http://127.0.0.1:3000/books|{"author":"book_author","title":"book_title","published_at":"YYYY-MM-DD"}|
-    |PUT   |Update a book|http://127.0.0.1:3000/books/{id}|{"author":"book_author","title":"book_title","published_at":"YYYY-MM-DD"}|
-    |DELETE|Delete a book|http://127.0.0.1:3000/books/{id}|-|
+    |POST  |Register user|http://127.0.0.1:3000/register|{"username":"username","password":"password"}|
+    |POST  |Login user   |http://127.0.0.1:3000/login|{"username":"username","password":"password"}|
+    |GET   |Get all books added by logged-in user|http://127.0.0.1:3000/books|-|
+    |GET   |Get a book added by logged-in user|http://127.0.0.1:3000/books/{id}|-|
+    |POST  |Create a book for logged-in user|http://127.0.0.1:3000/books|{"author":"book_author","title":"book_title"}|
