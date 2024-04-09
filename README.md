@@ -15,3 +15,5 @@ Hint: You will need to create a User Model. Implementing password hashing attrac
     |GET   |Get all books added by logged-in user|http://127.0.0.1:3000/books|-|
     |GET   |Get a book added by logged-in user|http://127.0.0.1:3000/books/{id}|-|
     |POST  |Create a book for logged-in user|http://127.0.0.1:3000/books|{"author":"book_author","title":"book_title"}|
+
+## NOTE: Please use postman to test this, makes everything easy.
